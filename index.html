@@ -4,10 +4,34 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Simple Three.js Portfolio</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <!-- Container for the Three.js Canvas -->
     <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+
+    <!-- UI Overlay to explain features -->
+    <div id="info-overlay">
+      <h2>Essential Three.js Features Demonstrated:</h2>
+      <ul id="feature-list">
+        <li><input type="checkbox" id="check-scene" disabled checked> <label for="check-scene"><strong>Scene:</strong> Container for all objects, lights, camera.</label></li>
+        <li><input type="checkbox" id="check-camera" disabled checked> <label for="check-camera"><strong>Camera (Perspective):</strong> Defines the viewpoint.</label></li>
+        <li><input type="checkbox" id="check-renderer" disabled checked> <label for="check-renderer"><strong>Renderer (WebGL):</strong> Draws the scene onto the canvas.</label></li>
+        <li><input type="checkbox" id="check-geometry" disabled checked> <label for="check-geometry"><strong>Geometry (Box, Plane):</strong> Defines shapes (the cube and ground).</label></li>
+        <li><input type="checkbox" id="check-material" disabled checked> <label for="check-material"><strong>Material (MeshStandard):</strong> Defines appearance (PBR realistic look).</label></li>
+        <li><input type="checkbox" id="check-mesh" disabled checked> <label for="check-mesh"><strong>Mesh:</strong> Combines Geometry and Material into a renderable object.</label></li>
+        <li><input type="checkbox" id="check-lights" disabled checked> <label for="check-lights"><strong>Lighting (Ambient & Directional):</strong> Illuminates the scene.</label></li>
+        <li><input type="checkbox" id="check-shadows" disabled checked> <label for="check-shadows"><strong>Shadows:</strong> Cast by the cube and model onto the ground.</label></li>
+        <li><input type="checkbox" id="check-loader" disabled checked> <label for="check-loader"><strong>Model Loading (GLTF/GLB):</strong> Loading external 3D assets (`myModel.glb`).</label></li>
+        <li><input type="checkbox" id="check-controls" disabled checked> <label for="check-controls"><strong>Controls (OrbitControls):</strong> Interact with the scene (Orbit: Left-click + drag, Zoom: Scroll, Pan: Right-click + drag).</label></li>
+        <li><input type="checkbox" id="check-animation" disabled checked> <label for="check-animation"><strong>Animation Loop:</strong> Continuous rendering and updates (cube rotation).</label></li>
+        <li><input type="checkbox" id="check-responsive" disabled checked> <label for="check-responsive"><strong>Responsiveness:</strong> Adapts to window resizing.</label></li>
+      </ul>
+      <p>Interact with the scene using your mouse!</p>
+       <button id="toggle-spin">Toggle Cube Spin</button> <!-- Interactive Element -->
+    </div>
+
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
